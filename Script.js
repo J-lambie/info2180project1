@@ -17,6 +17,7 @@ var mary = {
 var contacts = [bob, mary];
 
 function printPerson(person) {
+	console.log(person.firstName+" "+person.lastName);
     return (person.firstName + " " + person.lastName +"<li>"+" Phone: " + person.phoneNumber+"</li>" +"<li>"+ " Email: "+person.email+"</li>");
 }
 
@@ -25,6 +26,7 @@ function list() {
     var holder = [];
 	for (var i = 0; i < contactsLength; i++) {
 		holder[i] = printPerson(contacts[i])+"</br>";
+		printPerson(contacts[i]);
 	}
     return holder;
 }
